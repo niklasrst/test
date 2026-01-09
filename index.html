@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Message API Demo</title>
+</head>
+<body>
+  <button onclick="showRandomMessage()">Get Random Message</button>
+  <p id="message"></p>
+  <script>
+    const messages = [
+      "Welcome to Fraport AG!",
+      "Have a productive day!",
+      "Remember to check your emails.",
+      "Teamwork makes the dream work.",
+      "Safety first!"
+    ];
+
+    function showRandomMessage() {
+      const index = Math.floor(Math.random() * messages.length);
+      document.getElementById('message').textContent = messages[index];
+    }
+  </script>
+</body>
+</html>
